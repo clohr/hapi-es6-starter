@@ -5,7 +5,7 @@ module.exports = function (server) {
         maxLogSize: 1024 * 1024 * 1024,
         subscribers: {
             'console': ['request', 'log', 'error'],
-            'tmp/logs/': ['ops', 'request', 'log', 'error']
+            'logs': ['error']
         }
     };
 

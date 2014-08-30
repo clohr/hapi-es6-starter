@@ -38,10 +38,33 @@ test('browser should connect', function() {
     return this.browser.success.should.be.ok;
 });
 
-test('should connect to /stimpy', function(done) {
+test('should connect to /name/stimpy', function(done) {
     var self = this;
-    this.browser.visit(localhost + '/stimpy', function () {
+    this.browser.visit(localhost + '/name/stimpy', function () {
         return self.browser.success.should.be.ok;
+    }).then(done);
+});
+
+test('should connect to /name/123', function(done) {
+    var self = this;
+    this.browser.visit(localhost + '/name/123', function () {
+        return self.browser.success.should.be.ok;
+    }).then(done);
+});
+
+test('should connect to /name/ren123', function(done) {
+    var self = this;
+    this.browser.visit(localhost + '/name/ren123', function () {
+        return self.browser.success.should.be.ok;
+    }).then(done);
+});
+
+test('should not connect to /name/ren-123', function(done) {
+    var self = this;
+    this.browser.visit(localhost + '/name/ren-123', function (error) {
+        return (error === null).should.be.false;
+    }).then(null, function () {
+        return;
     }).then(done);
 });
 
