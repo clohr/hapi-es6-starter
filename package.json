@@ -27,7 +27,6 @@
     "should": "~4.0.4",
     "tap-spec": "~0.2.1",
     "mocha": "~1.21.4",
-    "zombie": "~2.0.0-alpha31",
-    "assert": "~1.1.2"
+    "zombie": "~2.0.0-alpha31"
   }
 }
