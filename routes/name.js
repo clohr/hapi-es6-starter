@@ -1,6 +1,7 @@
 'use strict';
 
 var Joi = require('joi');
+var config = require('../config');
 
 module.exports = {
     method: 'GET',
@@ -13,6 +14,7 @@ module.exports = {
             params: {
                 name: Joi.string().alphanum()
             }
-        }
+        },
+        cache: config.dev.routeCache
     }
 };

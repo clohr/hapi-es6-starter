@@ -1,5 +1,7 @@
 'use strict';
 
+var config = require('../config');
+
 function helloHapi (request, reply) {
     reply('Hello Hapi!');
 }
@@ -7,5 +9,8 @@ function helloHapi (request, reply) {
 module.exports = {
     method: 'GET',
     path: '/',
-    handler: helloHapi
+    handler: helloHapi,
+    config: {
+        cache: config.dev.routeCache
+    }
 };

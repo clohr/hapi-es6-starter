@@ -1,5 +1,7 @@
 'use strict';
 
+var config = require('../config');
+
 module.exports = {
     method: 'GET',
     path: '/view1',
@@ -10,5 +12,8 @@ module.exports = {
                 { url: "http://www.sproutcore.com/block", title: "SproutCore Blog" }
             ]
         });
+    },
+    config: {
+        cache: config.dev.routeCache
     }
 };
