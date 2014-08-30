@@ -5,9 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha test/**/*.spec.js",
-    "audit": "nsp audit-package",
-    "outdated": "npm outdated --depth 0"
+    "test": "mocha test/**/*.spec.js"
   },
   "keywords": [
     "hapi"
@@ -18,7 +16,7 @@
     "nodemon": "~1.2.1"
   },
   "dependencies": {
-    "hapi": "~6.5.1",
+    "hapi": "~6.7.1",
     "good": "~2.2.1",
     "glob": "~4.0.5",
     "path": "~0.4.9",
