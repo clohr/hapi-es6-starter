@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha test/**/*.spec.js"
+    "test": "istanbul cover --dir ./test/coverage node_modules/.bin/_mocha -- -R spec test/**/*.spec.js"
   },
   "keywords": [
     "hapi"

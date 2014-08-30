@@ -5,3 +5,9 @@
 [![devDependency Status](https://david-dm.org/clohr/hapijs-demo/dev-status.svg?theme=shields.io)](https://david-dm.org/clohr/hapijs-demo#info=devDependencies)
 
 Basic demo using HapiJS and handlebars.
+
+## Testing
+* Istanbul = code coverage reporter
+* Mocha = test framework
+* Zombie = headless browser
+* Should = assertion library
