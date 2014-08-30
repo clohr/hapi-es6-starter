@@ -5,6 +5,7 @@ var Hapi = require('hapi');
 var config = require('../config');
 var routes = require('../routes')();
 
+var localhost = 'http://localhost:' + config.port;
 var server;
 
 before(function(done) {
@@ -27,7 +28,7 @@ after(function(done){
 
 setup(function(done) {
     this.browser = Browser.create();
-    this.browser.visit('http://localhost:3000').then(done, done);
+    this.browser.visit(localhost).then(done, done);
     this.browser.on('error', function(error) {
         console.error(error);
     });
@@ -35,4 +36,18 @@ setup(function(done) {
 
 test('browser should connect', function() {
     return this.browser.success.should.be.ok;
+});
+
+test('should connect to /stimpy', function(done) {
+    var self = this;
+    this.browser.visit(localhost + '/stimpy', function () {
+        return self.browser.success.should.be.ok;
+    }).then(done);
+});
+
+test('should connect to /view1', function(done) {
+    var self = this;
+    this.browser.visit(localhost + '/view1', function () {
+        return self.browser.success.should.be.ok;
+    }).then(done);
 });
