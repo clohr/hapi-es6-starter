@@ -1,10 +1,26 @@
 'use strict';
 
-var path = require('path');
-var rootPath = path.normalize(__dirname, '/..');
+exports.test = {
+    port: 3000,
+    options: {
+        debug: {
+            request: false
+        },
+        views: {
+            engines: {
+                hbs: require('handlebars')
+            },
+            path: './views/partials',
+            layoutPath: './views',
+            layout: true,
+            isCached: false,
+            helpersPath: './helpers'
+        },
+        security: true
+    }
+};
 
-module.exports = {
-    root: rootPath,
+exports.dev = {
     port: 3000,
     options: {
         debug: {
@@ -18,10 +34,9 @@ module.exports = {
             path: './views/partials',
             layoutPath: './views',
             layout: true,
-            isCached: false,
+            isCached: true,
             helpersPath: './helpers'
         },
         security: true
     }
-
 };

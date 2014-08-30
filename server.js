@@ -5,7 +5,7 @@ var config = require('./config');
 var routes = require('./routes')();
 
 // create server instance
-var server = Hapi.createServer('localhost', config.port, config.options);
+var server = Hapi.createServer('localhost', config.dev.port, config.dev.options);
 
 // routes
 server.route(routes);

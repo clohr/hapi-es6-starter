@@ -5,12 +5,12 @@ var Hapi = require('hapi');
 var config = require('../config');
 var routes = require('../routes')();
 
-var localhost = 'http://localhost:' + config.port;
+var localhost = 'http://localhost:' + config.test.port;
 var server;
 
 before(function(done) {
     // create server instance
-    server = Hapi.createServer('localhost', config.port, config.options);
+    server = Hapi.createServer('localhost', config.test.port, config.test.options);
     // routes
     server.route(routes);
     // start server
