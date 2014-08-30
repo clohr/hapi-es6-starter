@@ -25,6 +25,7 @@
     "should": "~4.0.4",
     "tap-spec": "~0.2.1",
     "mocha": "~1.21.4",
-    "zombie": "~2.0.0-alpha31"
+    "zombie": "~2.0.0-alpha31",
+    "istanbul": "~0.3.0"
   }
 }
