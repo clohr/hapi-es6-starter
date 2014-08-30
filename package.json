@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha test/**/*.spec.js",
     "audit": "nsp audit-package",
     "outdated": "npm outdated --depth 0"
   },
@@ -23,6 +23,10 @@
     "glob": "~4.0.5",
     "path": "~0.4.9",
     "handlebars": "~2.0.0-alpha.4",
-    "catbox-memory": "~1.0.5"
+    "catbox-memory": "~1.0.5",
+    "should": "~4.0.4",
+    "tap-spec": "~0.2.1",
+    "mocha": "~1.21.4",
+    "zombie": "~2.0.0-alpha31"
   }
 }
