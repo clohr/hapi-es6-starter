@@ -5,18 +5,7 @@ exports.test = {
     options: {
         debug: {
             request: false
-        },
-        views: {
-            engines: {
-                hbs: require('handlebars')
-            },
-            path: './views/partials',
-            layoutPath: './views',
-            layout: true,
-            isCached: false,
-            helpersPath: './helpers'
-        },
-        security: true
+        }
     }
 };
 
@@ -34,16 +23,6 @@ exports.dev = {
             engine: require('catbox-memory')
         },
         cors: true,
-        views: {
-            engines: {
-                hbs: require('handlebars')
-            },
-            path: './views/partials',
-            layoutPath: './views',
-            layout: true,
-            isCached: true,
-            helpersPath: './helpers'
-        },
         security: true
     }
 };
