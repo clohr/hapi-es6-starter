@@ -1,18 +1,38 @@
 'use strict';
 
-var Browser = require('zombie');
+var Zombie = require('zombie');
 var Hapi = require('hapi');
+var plugins = require('../plugins');
 var config = require('../config');
 var routes = require('../routes')();
+var views = require('../views');
 
 var localhost = 'http://localhost:' + config.test.port;
 var server;
+
+var browser = new Zombie({
+    debug: true
+});
+setup(function(done) {
+    browser.visit(localhost).then(done);
+    browser.on('error', function(err) {
+        console.dir(err);
+    });
+});
 
 before(function(done) {
     // create server instance
     server = Hapi.createServer('localhost', config.test.port, config.test.options);
     // routes
     server.route(routes);
+    // views
+    server.views(views);
+    // plugins
+    server.pack.register(plugins, function(err) {
+        if (err) {
+            throw err;
+        }
+    });
     // start server
     server.start(function () {
         console.log('Hapi server started');
@@ -26,51 +46,27 @@ after(function(done){
     done();
 });
 
-setup(function(done) {
-    this.browser = Browser.create();
-    this.browser.visit(localhost).then(done, done);
-    this.browser.on('error', function(error) {
-        console.error(error);
-    });
-});
-
 test('browser should connect', function() {
-    return this.browser.success.should.be.ok;
+    return browser.success.should.be.ok;
 });
 
 test('should connect to /name/stimpy', function(done) {
-    var self = this;
-    this.browser.visit(localhost + '/name/stimpy', function () {
-        return self.browser.success.should.be.ok;
-    }).then(done);
+    browser.visit(localhost + '/name/stimpy', function () {
+        return browser.success.should.be.ok;
+    });
+    done();
 });
 
 test('should connect to /name/123', function(done) {
-    var self = this;
-    this.browser.visit(localhost + '/name/123', function () {
-        return self.browser.success.should.be.ok;
-    }).then(done);
-});
-
-test('should connect to /name/ren123', function(done) {
-    var self = this;
-    this.browser.visit(localhost + '/name/ren123', function () {
-        return self.browser.success.should.be.ok;
-    }).then(done);
-});
-
-test('should not connect to /name/ren-123', function(done) {
-    var self = this;
-    this.browser.visit(localhost + '/name/ren-123', function (error) {
-        return (error === null).should.be.false;
-    }).then(null, function () {
-        return;
-    }).then(done);
+    browser.visit(localhost + '/name/123', function () {
+        return browser.success.should.be.ok;
+    });
+    done();
 });
 
 test('should connect to /view1', function(done) {
-    var self = this;
-    this.browser.visit(localhost + '/view1', function () {
-        return self.browser.success.should.be.ok;
-    }).then(done);
+    browser.visit(localhost + '/view1', function () {
+        return browser.success.should.be.ok;
+    });
+    done();
 });

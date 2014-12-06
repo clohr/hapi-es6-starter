@@ -4,6 +4,7 @@ var Hapi = require('hapi');
 var config = require('./config');
 var routes = require('./routes')();
 var plugins = require('./plugins');
+var views = require('./views');
 
 // create server instance
 var server = Hapi.createServer('localhost', config.dev.port, config.dev.options);
@@ -12,16 +13,7 @@ var server = Hapi.createServer('localhost', config.dev.port, config.dev.options)
 server.route(routes);
 
 // views
-server.views({
-    engines: {
-        hbs: require('handlebars')
-    },
-    path: './views/partials',
-    layoutPath: './views',
-    layout: true,
-    isCached: false,
-    helpersPath: './helpers'
-});
+server.views(views);
 
 // plugins
 server.pack.register(plugins, function(err) {
