@@ -12,15 +12,6 @@
                     "response": "*"
                 }]
             }]
-        },
-        "vision": {
-            "engines": {
-                "jsx": "hapi-react-views"
-            },
-            "path": "./views",
-            "compileOptions": {
-                "pretty": true
-            }
         }
     }
 }

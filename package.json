@@ -2,10 +2,10 @@
   "name": "hapi-starter",
   "version": "1.0.0",
   "description": "hapijs framework starter",
-  "main": "lib/start.js",
+  "main": "server.js",
   "scripts": {
-    "start": "babel-node server.js",
-    "start-dev": "nodemon server.js",
+    "start": "babel-node",
+    "start-dev": "nodemon",
     "test": "lab -t 100 -v -L -a code",
     "test-cov-html": "lab -a code -r html -o coverage.html"
   },
