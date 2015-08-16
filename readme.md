@@ -4,16 +4,10 @@
 [![Dependency Status](https://david-dm.org/clohr/hapijs-demo.svg?theme=shields.io)](https://david-dm.org/clohr/hapijs-demo)
 [![devDependency Status](https://david-dm.org/clohr/hapijs-demo/dev-status.svg?theme=shields.io)](https://david-dm.org/clohr/hapijs-demo#info=devDependencies)
 
-Basic demo using HapiJS and handlebars.
+[hapijs](http://hapijs.com/) framework starter for Node.
 
 ## Installation
-* install the latest version of node `brew install node`
-* clone the repository `git clone git@github.com:clohr/hapijs-demo.git`
-* cd into the directory for the cloned project
-* run `npm install`
-
-## Testing
-* Istanbul = code coverage reporter
-* Mocha = test framework
-* Zombie = headless browser
-* Should = assertion library
+* Install the latest version of node - I recommend using [n](https://www.npmjs.com/package/n).
+* Clone the repository `git clone git@github.com:clohr/hapi-starter.git`
+* `cd` into the directory for the cloned project
+* Type `npm i`

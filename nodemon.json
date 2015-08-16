@@ -1,3 +1,7 @@
 {
+    "execMap": {
+        "js": "babel-node"
+    },
+    "ext": "js",
     "ignore": ["node_modules/*"]
 }

@@ -1,34 +1,46 @@
 {
-  "name": "HapiJS",
-  "version": "0.0.3",
-  "description": "HapiJS exercises",
-  "main": "server.js",
+  "name": "hapi-starter",
+  "version": "1.0.0",
+  "description": "hapijs framework starter",
+  "main": "lib/index.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "babel-node server.js",
     "start-dev": "nodemon server.js",
-    "test": "istanbul cover --dir ./test/coverage node_modules/.bin/_mocha -- -R spec test/**/*.spec.js"
+    "test": "lab -t 100 -v -L -a code",
+    "test-cov-html": "lab -a code -r html -o coverage.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clohr/hapi-starter"
+  },
+  "bugs": {
+    "url": "https://github.com/clohr/hapi-starter/issues"
   },
   "keywords": [
-    "hapi"
+    "hapi",
+    "hapijs",
+    "starter"
   ],
   "author": "Christian Lohr <christian.lohr@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "nodemon": "~1.2.1"
+    "babel": "^5.8.21",
+    "lab": "^5.15.1",
+    "nodemon": "^1.4.1"
   },
   "dependencies": {
-    "catbox-memory": "~1.1.1",
-    "glob": "~4.3.1",
-    "good": "~4.0.2",
-    "good-console": "^2.1.0",
-    "handlebars": "~2.0.0-alpha.4",
-    "hapi": "~7.5.2",
-    "istanbul": "~0.3.0",
-    "joi": "~5.0.2",
-    "mocha": "~2.0.1",
-    "path": "~0.4.9",
-    "should": "~4.3.0",
-    "tap-spec": "~2.1.1",
-    "zombie": "~2.5.0"
+    "boom": "^2.8.0",
+    "confidence": "^1.2.0",
+    "glue": "^2.1.1",
+    "good": "^6.3.0",
+    "good-console": "^5.0.2",
+    "hapi": "^9.0.2",
+    "hapi-react-views": "^3.1.0",
+    "hoek": "^2.14.0",
+    "inert": "^3.0.1",
+    "joi": "^6.6.1",
+    "react": "^0.13.3",
+    "vision": "^3.0.0",
+    "wreck": "^6.1.0"
   }
 }

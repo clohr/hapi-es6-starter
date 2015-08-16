@@ -1,0 +1,26 @@
+{
+    "connections": [{
+        "port": 9000,
+        "labels": ["app"]
+    }],
+    "plugins": {
+        "good": {
+            "reporters": [{
+                "reporter": "good-console",
+                "events": [{
+                    "log": "*",
+                    "response": "*"
+                }]
+            }]
+        },
+        "vision": {
+            "engines": {
+                "jsx": "hapi-react-views"
+            },
+            "path": "./views",
+            "compileOptions": {
+                "pretty": true
+            }
+        }
+    }
+}
