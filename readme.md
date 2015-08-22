@@ -4,7 +4,7 @@
 [![Dependency Status](https://david-dm.org/clohr/hapijs-demo.svg?theme=shields.io)](https://david-dm.org/clohr/hapijs-demo)
 [![devDependency Status](https://david-dm.org/clohr/hapijs-demo/dev-status.svg?theme=shields.io)](https://david-dm.org/clohr/hapijs-demo#info=devDependencies)
 
-[hapijs](http://hapijs.com/) framework starter for Node.
+[hapijs](http://hapijs.com/) es6 starter for Node.
 
 ## Installation
 * Install the latest version of node - I recommend using [n](https://www.npmjs.com/package/n).

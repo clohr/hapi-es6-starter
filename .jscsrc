@@ -1,0 +1,18 @@
+{
+    "preset": "google",
+    "fileExtensions": [ ".js", "jscs" ],
+
+    "requireParenthesesAroundIIFE": true,
+    "maximumLineLength": 120,
+    "validateLineBreaks": "LF",
+    "validateIndentation": 4,
+
+    "disallowKeywords": ["with"],
+    "disallowNewlineBeforeBlockStatements": true,
+    "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
+    "requireLineFeedAtFileEnd": null,
+    "disallowMultipleVarDecl": "strict",
+    "safeContextKeyword": ["_this"],
+
+    "excludeFiles": ["node_modules/**"]
+}

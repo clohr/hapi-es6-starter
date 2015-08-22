@@ -1,46 +1,42 @@
 {
-  "name": "hapi-starter",
+  "name": "hapi-es6-starter",
   "version": "1.0.0",
-  "description": "hapijs framework starter",
-  "main": "server.js",
+  "description": "hapijs es6 starter",
+  "main": "lib/start.js",
   "scripts": {
     "start": "babel-node",
     "start-dev": "nodemon",
-    "test": "lab -t 100 -v -L -a code",
-    "test-cov-html": "lab -a code -r html -o coverage.html"
+    "test": "lab -t 100 -T node_modules/lab-babel -S -v -L -a code",
+    "test-cov-html": "lab -T node_modules/lab-babel -S -a code -r html -o coverage.html"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/clohr/hapi-starter"
+    "url": "https://github.com/clohr/hapi-es6-starter"
   },
   "bugs": {
-    "url": "https://github.com/clohr/hapi-starter/issues"
+    "url": "https://github.com/clohr/hapi-es6-starter/issues"
   },
   "keywords": [
     "hapi",
     "hapijs",
+    "es6",
     "starter"
   ],
   "author": "Christian Lohr <christian.lohr@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "babel": "^5.8.21",
-    "lab": "^5.15.1",
+    "babel-core": "^5.8.22",
+    "babel-eslint": "^4.0.10",
+    "code": "^1.5.0",
+    "lab": "^5.15.2",
+    "lab-babel": "^1.1.0",
     "nodemon": "^1.4.1"
   },
   "dependencies": {
-    "boom": "^2.8.0",
-    "confidence": "^1.2.0",
-    "glue": "^2.1.1",
+    "glue": "^2.2.0",
     "good": "^6.3.0",
-    "good-console": "^5.0.2",
-    "hapi": "^9.0.2",
-    "hapi-react-views": "^3.1.0",
-    "hoek": "^2.14.0",
-    "inert": "^3.0.1",
-    "joi": "^6.6.1",
-    "react": "^0.13.3",
-    "vision": "^3.0.0",
-    "wreck": "^6.1.0"
+    "good-console": "^5.0.3",
+    "hapi": "^9.0.3",
+    "hoek": "^2.14.0"
   }
 }

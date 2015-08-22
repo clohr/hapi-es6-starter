@@ -4,12 +4,15 @@
         "labels": ["app"]
     }],
     "plugins": {
+        "./version": {},
         "good": {
             "reporters": [{
                 "reporter": "good-console",
                 "events": [{
                     "log": "*",
-                    "response": "*"
+                    "response": "*",
+                    "error": "*",
+                    "ops": "*"
                 }]
             }]
         }
