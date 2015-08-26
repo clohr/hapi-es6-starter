@@ -1,20 +1,30 @@
 {
-    "connections": [{
-        "port": 9000,
-        "labels": ["app"]
-    }],
+    "connections": [
+        {
+            "host": "0.0.0.0",
+            "port": 9000,
+            "labels": [
+                "app"
+            ]
+        }
+    ],
     "plugins": {
         "./version": {},
+        "poop": {
+            "logPath": "./logs/poop.log"
+        },
         "good": {
-            "reporters": [{
-                "reporter": "good-console",
-                "events": [{
-                    "log": "*",
-                    "response": "*",
-                    "error": "*",
-                    "ops": "*"
-                }]
-            }]
+            "reporters": [
+                {
+                    "reporter": "good-console",
+                    "events": {
+                        "log": "*",
+                        "response": "*",
+                        "error": "*",
+                        "ops": "*"
+                    }
+                }
+            ]
         }
     }
 }

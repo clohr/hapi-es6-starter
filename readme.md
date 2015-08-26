@@ -1,6 +1,6 @@
 # HapiJS ES6 Starter
 
-[![Build Status](https://travis-ci.org/clohr/hapi-starter.svg?branch=master)](https://travis-ci.org/clohr/hapi-starter)
+[![Build Status](https://travis-ci.org/clohr/hapi-es6-starter.svg?branch=master)](https://travis-ci.org/clohr/hapi-es6-starter)
 [![Dependency Status](https://david-dm.org/clohr/hapi-es6-starter.svg)](https://david-dm.org/clohr/hapi-es6-starter)
 [![devDependency Status](https://david-dm.org/clohr/hapi-es6-starter/dev-status.svg)](https://david-dm.org/clohr/hapi-es6-starter#info=devDependencies)
 

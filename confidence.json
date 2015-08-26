@@ -1,0 +1,41 @@
+{
+    "connections": [{
+        "host": "0.0.0.0",
+        "port": 9000,
+        "labels": ["app"]
+    }],
+    "plugins": {
+        "$filter": env,
+        "$base": {
+            "./version": {},
+            "poop": {
+                "logPath": "./logs/poop.log"
+            }
+        },
+        "dev": {
+            "good": {
+                "reporters": [{
+                    "reporter": "good-console",
+                    "events": {
+                        "log": "*",
+                        "response": "*",
+                        "error": "*"
+                    }
+                }]
+            }
+        },
+        "prod": {
+            "good": {
+                "reporters": [{
+                    "reporter": "good-file",
+                    "events": { "log": "*" },
+                    "config": "./logs/log.log"
+                }, {
+                    "reporter": "good-file",
+                    "events": { "ops": "*" },
+                    "config": "./logs/ops.log"
+                }]
+            }
+        }
+    }
+}
