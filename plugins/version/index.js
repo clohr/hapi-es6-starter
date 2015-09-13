@@ -1,6 +1,6 @@
 'use strict';
 
-import Package from '../../package.json';
+const Package = require('../../package.json');
 
 // Declare internals
 
@@ -28,4 +28,4 @@ register.attributes = {
     name: 'version'
 };
 
-export default register;
+module.exports = register;

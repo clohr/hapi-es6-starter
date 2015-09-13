@@ -1,17 +1,15 @@
 // Load modules
 
-import Code from 'code';
-import Lab from 'lab';
-import Path from 'path';
-import HapiStarter from '../lib';
-import manifest from '../manifest.json';
+const Code = require('code');
+const Lab = require('lab');
+const Path = require('path');
+const HapiStarter = require('../lib');
 
 // Test shortcuts
 
 const lab = exports.lab = Lab.script();
 const expect = Code.expect;
 const it = lab.test;
-
 
 it('starts server', (done) => {
 
