@@ -2,9 +2,7 @@
 
 const Code = require('code');
 const Lab = require('lab');
-const Path = require('path');
 const HapiStarter = require('../lib');
-const Version = require('../plugins/version');
 const Pkg = require('../package.json');
 
 // Test shortcuts

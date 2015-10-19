@@ -2,7 +2,6 @@
 
 const Code = require('code');
 const Lab = require('lab');
-const Path = require('path');
 const HapiStarter = require('../lib');
 
 // Test shortcuts
