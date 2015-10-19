@@ -7,10 +7,7 @@
     "plugins": {
         "$filter": env,
         "$base": {
-            "./version": {},
-            "poop": {
-                "logPath": "./logs/poop.log"
-            }
+            "./version": {}
         },
         "dev": {
             "good": {

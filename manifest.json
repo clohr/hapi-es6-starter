@@ -10,9 +10,6 @@
     ],
     "plugins": {
         "./version": {},
-        "poop": {
-            "logPath": "./logs/poop.log"
-        },
         "good": {
             "reporters": [
                 {
